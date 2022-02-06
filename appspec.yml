@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+hooks:
+  DockerLogin:
+    - location: myscripts/docker_login.sh
+      timeout: 300
+      runas: ec2-user
+
+  DockerPull:
+    - location: myscripts/docker_pull.sh
+      timeout: 300
+      runas: ec2-user
